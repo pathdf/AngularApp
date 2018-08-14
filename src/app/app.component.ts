@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+import { UserService } from 'src/app/user.service';
+import { LoginUser } from 'src/app/login-user';
 
 @Component({
   selector: 'app-root',
@@ -12,15 +10,15 @@ const httpOptions = {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title : string;
-  
-
-  constructor(private http : HttpClient){}
+ 
+  constructor(){}
 
   ngOnInit(){
    
    
   };
+
+ 
     
   
 }

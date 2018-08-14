@@ -9,13 +9,15 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './user.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    AddUserComponent
+    AddUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot()
     
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

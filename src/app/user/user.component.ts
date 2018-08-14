@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { error } from 'util';
 
 @Component({
   selector: 'app-user',
@@ -15,6 +16,8 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getUsers().subscribe(data => {
+     
+      if(error){console.log(error);}
       this.users = data;
     });
   };
@@ -25,4 +28,12 @@ export class UserComponent implements OnInit {
     });
   };
 
+  sorting(){
+    this.users=this.users.sort((a : User , b : User)=> {
+      if(a.firstName>b.firstName)
+      return 1;
+      else if(a.firstName<b.firstName)
+      return -1;
+    });
+  };
 }

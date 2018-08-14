@@ -5,7 +5,7 @@
   <table class="table table-striped">
     <thead>
     <tr>
-      <th class="hidden">Id</th>
+      <th class="hidden" (click)="sorting()">S.No.</th>
       <th>FirstName</th>
       <th>LastName</th>
       <th>Contact No.</th>
@@ -13,8 +13,8 @@
     </tr>
   </thead>
     <tbody>
-    <tr *ngFor="let user of users">
-      <td class="hidden">{{user.id}}</td>
+    <tr *ngFor="let user of users; let i = index">
+      <td class="hidden">{{i+1}}</td>
       <td>{{user.firstName}}</td>
       <td>{{user.lastName}}</td>
       <td>{{user.contactNo}}</td>

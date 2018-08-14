@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { LoginUser } from 'src/app/login-user';
 
 @Component({
   selector: 'app-add-user',
